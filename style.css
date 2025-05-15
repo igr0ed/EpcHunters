@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Actay', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    background: url(img/body-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-attachment: fixed;
+    width: 100vw;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(70, 70, 70, 0.72) 28%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.3;
+    z-index: -2;
+}
+
+.main {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+
+.logo_mobile {
+    display: none;
+}
+
+.header {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 33px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-right: 52px;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    list-style-type: none;
+    margin-right: 40px;
+    width: 123px;
+}
+
+.nav__link {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.search {
+    position: relative;
+}
+
+.search__input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 20px;
+    outline: none;
+    width: 175px;
+}
+
+.search__input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+.search__icon {
+    position: absolute;
+    left: 155px;
+    width: 23px;
+    height: 21px;
+    fill: white;
+    pointer-events: none;
+}
+
+/* Section */
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__title {
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.steps {
+    position: relative;
+    width: 1140px;
+    height: 470px;
+    margin-bottom: 32px;
+    z-index: -1;
+}
+
+.step {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    width: 310px;
+    height: 79px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: solid 3px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 15px;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.step::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    right: -35px;
+    background-image: url(/img/for-step-text.svg);
+    background-repeat: no-repeat;
+}
+
+.step__title {
+    width: 48px;
+    height: 48px;
+    background-color: #5E7600;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    margin-right: 10px;
+    color: #F6FFD2;
+}
+
+.step__text {
+    font-weight: 100;
+    color: #F6FFD2;
+    width: 200px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.step--1 {
+    top: 15px;
+}
+
+.step--1::before {
+    content: '';
+    width: 140px;
+    height: 170px;
+    position: absolute;
+    top: 75px;
+    background-image: url(img/step-1.svg);
+    background-repeat: no-repeat;
+}
+
+.step--2 {
+    top: 262px;
+    left: 78px;
+}
+
+.step--2::before {
+    content: '';
+    width: 170px;
+    height: 130px;
+    position: absolute;
+    top: 75px;
+    left: 170px;
+    background-image: url(img/step-2.svg);
+    background-repeat: no-repeat;
+}
+
+.step--3 {
+    top: 360px;
+    left: 426px;
+}
+
+.step--3::before {
+    content: '';
+    width: 200px;
+    height: 155px;
+    position: absolute;
+    bottom: 75px;
+    left: 30px;
+    background-image: url(img/step-3.svg);
+    background-repeat: no-repeat;
+}
+
+.step--4 {
+    top: 128px;
+    left: 355px;
+}
+
+.step--4::before {
+    content: '';
+    width: 260px;
+    height: 70px;
+    position: absolute;
+    bottom: 70px;
+    left: 220px;
+    background-image: url(img/step-4.svg);
+    background-repeat: no-repeat;
+}
+
+.step--5 {
+    top: 56px;
+    right: -8px;
+}
+
+.step--5::before {
+    content: '';
+    width: 160px;
+    height: 170px;
+    position: absolute;
+    top: 55px;
+    left: 150px;
+    background-image: url(img/step-5.svg);
+    background-repeat: no-repeat;
+}
+
+.step--6 {
+    top: 215px;
+    right: 130px;
+}
+
+.buttons {
+    display: none;
+}
+
+.button-info {
+    width: 215px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+    background: white;
+    color: black;
+    border-radius: 35px;
+    width: 933px;
+    height: 471px;
+    position: relative;
+    font-size: 19px;
+    line-height: 1.5;
+    text-align: center;
+    overflow: hidden;
+    padding: 95px 61px;
+    box-sizing: border-box;
+}
+
+.modal__text {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.modal__text::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+.modal__text::-webkit-scrollbar-track {
+    background-color: rgba(46, 46, 46, 0.3);
+    border-radius: 10px;
+}
+
+.modal__text::-webkit-scrollbar-thumb {
+    background-color: rgba(46, 46, 46, 0.7);
+    border-radius: 10px;
+}
+
+.close-button {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 40px;
+    opacity: 0.3;
+}
+
+.close-button:hover {
+    opacity: 1;
+}
+
+.close-button:before,
+.close-button:after {
+    position: absolute;
+    content: '';
+    height: 41px;
+    width: 2px;
+    background-color: #333;
+}
+
+.close-button:before {
+    transform: rotate(45deg);
+}
+
+.close-button:after {
+    transform: rotate(-45deg);
+}
+
+
+
+@font-face {
+    font-family: 'Actay';
+    src: url('fonts/ActayCondensed-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Actay';
+    src: url('fonts/Actay-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Actay';
+    src: url('fonts/ActayWide-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
