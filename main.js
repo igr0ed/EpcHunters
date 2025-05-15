@@ -67,4 +67,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initSlider();
 
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const delta = touchEndX - touchStartX;
+        if (Math.abs(delta) > 50) { // минимальная длина свайпа
+            if (delta < 0) {
+                goToNextSlide();
+            } else {
+                goToPrevSlide();
+            }
+        }
+    }
+
 })
+
